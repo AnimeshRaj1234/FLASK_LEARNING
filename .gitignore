@@ -1,2 +1,7 @@
 # VIRTUAL ENVIRONMENT
 venv/
+
+# VS CODE
+.vscode/
+
+# git checkout -b "routing"

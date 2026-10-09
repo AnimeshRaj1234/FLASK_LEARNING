@@ -10,8 +10,15 @@ app = Flask(__name__) # what is its role ?
 
 @app.route("/")
 def home():
-    return "WELCOME TO FLASK WORLD"
+    return "WELCOME TO HOME PAGE"
 
+@app.route("/about")
+def about():
+    return "WELCOME TO ABOUT PAGE"
+
+@app.route("/contact")
+def contact():
+    return "WELCOME TO CONTACT PAGE"
 
 if __name__ == "__main__": 
     app.run(debug=True)
