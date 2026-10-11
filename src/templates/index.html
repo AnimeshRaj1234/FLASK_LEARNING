@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINJA2_WEBPAGE</title>
+    
+</head>
+<body>
+
+    {% if is_logged_in %}
+    <h1> HELLO, {{name}}, THIS IS RUDY </h1>
+    {% else %}
+    <h1> Please Login </h1>
+    {% endif %}
+
+    {% if marks > 90%}
+    <h2> Grade A </h2>
+    {% elif marks > 80%}
+    <h2> Grade B </h2>
+    {% elif marks > 70%}
+    <h2> Grade C </h2>
+    {% elif marks > 60%}
+    <h2> Grade D </h2>
+    {% else %}
+    <h2> Fail </h2>
+    {% endif %}
+
+    <h1>HERE ARE THE FOLLOWING COURSES FOR YOU :</h1>
+    {% for course in courses %}
+    <h2> {{course}} </h2>
+    {% endfor %}
+
+</body>
+</html>

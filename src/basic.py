@@ -1,0 +1,28 @@
+# FLASK => LIGHTWEIGHT FRAMEWORK THAT USES PYTHON PROGRAMMING LANGUAGE, IT IS USED TO MAKE WEB APPLICATIONS.
+
+# FASTAPI => USED TO MAKE MODERN API'S THAT ARE REALLY FAST AND ARE OF PRODUCTION LEVEL.
+
+# DJANGO => FRAMEWORK FOR LARGE WEB APPLICATIONS. HAS MORE BUILT IN FEATURES THAveN FLASK AND FASTAPI.
+
+from flask import Flask
+
+app = Flask(__name__) # WHAT IS ITS ROLE ?
+
+@app.route("/")
+def home():
+    return "WELCOME TO HOME PAGE"
+
+@app.route("/about")
+def about():
+    return "WELCOME TO ABOUT PAGE"
+
+@app.route("/contact")
+def contact():
+    return "WELCOME TO CONTACT PAGE"
+
+if __name__ == "__main__": 
+    app.run(debug=True)
+
+# TO RUN THE PROGRAM TIME AND AGAIN WITHOUT RUNNING IT MANUALLY
+
+# __name__ => SPECIAL VARIABLE THAT TELLS YOU THE CURRENT MODULE'S NAME 
